@@ -1,0 +1,95 @@
+@import url('https://fonts.cdnfonts.com/css/1313-mockingbird-lane');
+
+body{
+
+    
+    background-image: url(/imagenProyecto/verde10.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    text-align: center;
+}
+
+#encabezado{
+
+  padding-bottom: 20px;
+
+}
+
+#letraMunster{
+
+ font-family:'1313 MockingbiRd Lane', sans-serif;
+ font-size: 50px;
+ line-height:24px;
+ margin-top: 6%;
+ color:#700d0d;
+ /*text-shadow: 4px 4px 5px gold;*/
+ text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
+               4px 4px 5px rgba(201, 234, 14, 0.8);  
+
+}
+
+
+#letraMunster-enlace{
+ text-decoration: none; 
+    
+}
+
+#letraMunster:hover{
+
+  /* border: transparent; */
+  color:#034c04;
+  cursor:pointer; 
+ 
+}
+
+.imagenportada-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+   
+
+}
+   
+.imagenportada-container img{
+    max-width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 11px;
+    box-shadow: 10px 10px 100px rgb(217, 198, 87); 
+    filter: drop-shadow(5px 5px 10px rgba rgb(24, 99, 5));
+    border-width:5px;
+    margin:2px;
+    border-style: double; 
+    border-color:rgb(154, 135, 26); 
+
+   
+   
+}
+
+
+
+.gallery-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap:5px;
+ 
+}
+ .gallery-img{
+ width:100px;
+ height:100px;
+
+ }
+
+.gallery-title{
+  
+}
+
+
+ 
+
+ 
