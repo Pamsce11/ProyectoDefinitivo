@@ -11,3 +11,31 @@ body{
 }
 
     
+#encabezado{
+   padding-bottom: 30px;   
+}
+
+#letraMunster{
+  
+ font-family:'1313 MockingbiRd Lane', sans-serif;
+ font-size: 50px;
+ line-height:24px;
+ margin-top: 6%;
+ color:#700d0d;
+ /*text-shadow: 4px 4px 5px gold;*/
+ text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
+               4px 4px 5px rgba(201, 234, 14, 0.8);    
+}
+
+
+#letraMunster-enlace{
+ text-decoration: none; 
+    
+}
+
+#letraMunster:hover {
+    /* border: transparent; */
+  color: #034c04;
+  cursor: pointer;  
+}
+
