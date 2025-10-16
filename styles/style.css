@@ -80,7 +80,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 9px;
+  padding: 20px;
 
 
 }
@@ -105,43 +105,29 @@ body {
   border-radius: 9em;
   overflow: hidden;
   margin: 20px;
+  margin-bottom: 70px;
 }
 
-.contenedor-Footer {
-  background: transparent;
-  background-color: rgba(0, 128, 0, 0.5);
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-
+#botonArriba{
+  width: 40px;
+  height: 60px;
+  position: fixed; 
+  bottom: 30px;
+  right: 40px;
+  border-radius:50;
+  padding: 5px;
+  position: fixed;
+ 
+  color:#700d0d;
+ 
 }
 
-#contenidoFooter {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-
-}
-
-.copyright p {
-  margin: 0;
-  font-size: 1.2rem;
-  font-family: '1313 MockingbiRd Lane', sans-serif;
 
 
-}
 
-.contact-logos img {
-  width: 50px;
-  height: auto;
-  margin: 5px;
+#botonArriba:hover {
+  border-style: none;
+  width: 20x;
+  height: 40px;
 
-}
-
-.iniciocaja:hover{
-  color: #034c04;
-  cursor: pointer;
 }

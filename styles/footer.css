@@ -1,0 +1,33 @@
+.contenedor-Footer {
+  background: transparent;
+  background-color: rgba(0, 128, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #642c2c;
+  text-align: center;
+  
+  
+
+
+}
+
+#contenidoFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-family: '1313 MockingbiRd Lane', sans-serif;
+  margin: 0;
+  font-size: 1.8rem;  
+  line-height:0;
+  
+
+}
+
+
+.contact-logos img {
+  width: 50px;
+  height: auto;
+  margin: 5px;
+  margin-top: 0;
+}
