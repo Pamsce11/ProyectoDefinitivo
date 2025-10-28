@@ -9,26 +9,42 @@ body {
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
+
 }
 
 #encabezado {
 
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 
 }
 
 #letraMunster {
-
   font-family: '1313 MockingbiRd Lane', sans-serif;
-  font-size: 50px;
-  line-height: 24px;
+  font-size: 70px;
+  line-height: 28px;
   margin-top: 6%;
   color: #700d0d;
   /*text-shadow: 4px 4px 5px gold;*/
   text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
     4px 4px 5px rgba(201, 234, 14, 0.8);
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: entrar-desde-arriba 0.4s ease-out forwards;
 
 }
+
+@keyframes entrar-desde-arriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 
 #letraMunster-enlace {
@@ -40,7 +56,8 @@ body {
 
   /* border: transparent; */
   color: #034c04;
-  cursor: pointer;
+  cursor: url('../imagenProyecto/3812744-evil-halloween-hand-undead-zombie_109090.png') pointer;
+
 
 }
 
@@ -59,8 +76,7 @@ body {
   max-width: 500px;
   height: 500px;
   object-fit: cover;
-  border-radius: 20px;
-  box-shadow: 10px 10px 100px rgb(29, 28, 21);
+  border-radius: 0px;
   filter: drop-shadow(5px 5px 10px rgba rgb(24, 99, 5));
   border-width: 30px;
   margin: 5px;
@@ -70,20 +86,26 @@ body {
   border-image-slice: 70;
   border-image-width: 40px;
   border-image-repeat: round;
+  /*box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.7),
+    inset -5px -5px 15px rgba(174, 198, 206, 0.7),
+    inset 5px 5px 15px rgba(238, 233, 229, 0.3);*/
 
+  box-shadow: 10px 10px 10px black;
 
 
 
 }
+
+
 
 .gallery-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
-
-
+  padding: 40px;/
 }
+
+
 
 
 .gallery-img {
@@ -101,25 +123,52 @@ body {
 
 }
 
+
+
+
+@keyframes ghostly-entry {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .gallery-item {
   border-radius: 9em;
   overflow: hidden;
   margin: 20px;
   margin-bottom: 70px;
+  animation-name: ghostly-entry;
+  animation-duration: 9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  box-shadow: 10px 10px 10px black;
+  background-color: black;
+
+
 }
 
-#botonArriba{
-  width: 40px;
-  height: 60px;
-  position: fixed; 
-  bottom: 30px;
+
+
+
+#botonArriba {
+  width: 60px;
+  height: 50px;
+  position: fixed;
+  bottom: 40px;
   right: 40px;
-  border-radius:50;
+  border-radius: 50;
   padding: 5px;
   position: fixed;
- 
-  color:#700d0d;
- 
+
+  color: #700d0d;
+
 }
 
 
@@ -130,4 +179,41 @@ body {
   width: 20x;
   height: 40px;
 
+
+}
+
+@keyframes slideInFantasma {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+    filter: blur(5px);
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+
+
+.imagenportada-container img {
+  opacity: 0;
+  animation: slideInFantasma 0.4s ease-out forwards;
+}
+
+
+
+.imagenportada-container img:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.imagenportada-container img:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.imagenportada-container img:nth-child(1) {
+  animation-delay: 1.5s;
 }
