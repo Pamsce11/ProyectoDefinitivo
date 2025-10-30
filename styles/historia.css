@@ -190,7 +190,7 @@ body {
     4px 4px 5px rgba(201, 234, 14, 0.8);
   text-align: center;
   margin-top: -10px;
-  margin-bottom: 10px;
+  margin-bottom: 2px;
 }
 
 .historia3 p {
@@ -231,8 +231,8 @@ body {
 
 }
 
-.historia4 img{
-   width: 495px;
+.historia4 img {
+  width: 495px;
   border-radius: 0px;
   box-shadow: 10px 10px 10px black;
   border: groove 30px;
@@ -243,35 +243,36 @@ body {
 }
 
 .historia4P {
-   margin-top: 20px;
+  margin-top: 20px;
   font-family: 'comic sans ms', cursive, sans-serif;
   font-size: 1.2em;
-  text-align: justify; 
+  text-align: justify;
+   
 }
 
-.caja5-6{
+.caja5-6 {
   display: flex;
   gap: 30px;
   padding: 20px;
-  
+
 
 }
-  
 
-.historia5{
-  display: flex; 
+
+.historia5 {
+  display: flex;
   padding: 20px;
   background-color: rgba(0, 128, 0, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
   width: 48%;
   margin-left: 60px;
-
+align-items: center;
 
 }
 
-.historia5 img{
-  width: 350px;
+.historia5 img {
+  width: 400px;
   border-radius: 0px;
   box-shadow: 10px 10px 10px black;
   border: groove 30px;
@@ -279,9 +280,14 @@ body {
   border-image-slice: 100;
   border-image-width: 70px;
   border-image-repeat: round;
-  margin:15px;
-  
+  margin: 0 auto;
+  display: block;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+
 }
+
 
 
 .historia5 h2 {
@@ -292,24 +298,23 @@ body {
   text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
     4px 4px 5px rgba(201, 234, 14, 0.8);
   text-align: center;
-  margin-top: -10px;
-  margin-bottom: 10px;
+  margin-top: -6px;
+  margin-bottom: 30px;
 }
-.historia5P{
-  margin-top: 20px;
+
+.historia5P {
+   margin-top: 30px;
   font-family: 'comic sans ms', cursive, sans-serif;
   font-size: 1.2em;
   text-align: justify;
-  display: flex; /* Habilita Flexbox */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  flex-direction: column;
-
+ 
 }
-  
 
-.historia6{
-  display: flex; 
+ 
+
+
+.historia6 {
+  display: flex;
   padding: 20px;
   background-color: rgba(0, 128, 0, 0.5);
   background-repeat: no-repeat;
@@ -320,8 +325,8 @@ body {
 }
 
 
-.historia6 img{
-  width: 350px;
+.historia6 img {
+  width: 430px;
   border-radius: 0px;
   box-shadow: 10px 10px 10px black;
   border: groove 30px;
@@ -329,17 +334,45 @@ body {
   border-image-slice: 100;
   border-image-width: 70px;
   border-image-repeat: round;
-  margin:15px;
-
+  margin: 0 auto;
+  display: block; 
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
 }
 
-.historia6P{
-   margin-top: 20px;
+
+.historia6P {
+  margin-top: 30px;
   font-family: 'comic sans ms', cursive, sans-serif;
   font-size: 1.2em;
   text-align: justify;
-  display: flex; /* Habilita Flexbox */
-  justify-content: center; /* Centra el contenido horizontalmente */
-  align-items: center; /* Centra el contenido verticalmente */
-  flex-direction: column;
+  
+}
+
+.galeria6{
+  display: flex;
+  justify-content: center;
+  gap:20px
+  
+
+}
+
+.galeria6 img{
+max-width:300px;
+height: auto;
+margin-top:10px;
+margin-bottom: 10px;
+}
+
+.historia6P h2{
+font-family: '1313 MockingbiRd Lane', sans-serif;
+  font-size: 70px;
+  color: #700d0d;
+  /*text-shadow: 4px 4px 5px gold;*/
+  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
+    4px 4px 5px rgba(201, 234, 14, 0.8);
+  text-align: center;
+  margin-top: -6px;
+  margin-bottom: 26px;
 }

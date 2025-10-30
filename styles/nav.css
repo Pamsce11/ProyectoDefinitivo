@@ -7,7 +7,6 @@ nav {
     position: sticky;
     top:0;
     border-bottom: 2px groove green;
-    border-top:2px groove green;
     background:transparent;
     background-color: rgba(0, 128, 0, 0.5);
     background-repeat: no-repeat;
@@ -47,7 +46,9 @@ ul.menu-desplegable {
 
 ul.menu-desplegable li {
     padding: 0.5em;
+ 
 }
+
 
 ul.menu-desplegable a {
     text-decoration: none;
@@ -56,9 +57,9 @@ ul.menu-desplegable a {
     font-size: 1.5em;
     padding: 0.2em 0.4em;
     text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-               4px 4px 5px rgba(201, 234, 14, 0.8);    
-
-    
+               4px 4px 5px rgba(201, 234, 14, 0.8); 
+               
+               
 }
 
 ul.menu-desplegable a:hover {
@@ -66,6 +67,25 @@ ul.menu-desplegable a:hover {
     /*color: rgb(168, 159, 247);*/
     text-decoration: none;
     color:#075408;
+}
+
+/* submenu con hover */
+
+.sub-menu{
+    display: none;
+    list-style: none;
+    margin-left: -2em;
+    background:transparent;
+    background-color: rgba(0, 128, 0, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+     z-index:100;
+}
+
+
+.menu-desplegable li:hover .sub-menu{
+    display:block;
+    position: absolute;
 }
 
 @media screen and (min-width:1000px) {
