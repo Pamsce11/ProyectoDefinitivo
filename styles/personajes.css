@@ -1,0 +1,98 @@
+@import url('https://fonts.cdnfonts.com/css/1313-mockingbird-lane');
+
+body {
+
+  background-image: url(/imagenProyecto/verde10.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+
+#encabezado {
+  padding-bottom: 30px;
+}
+
+#letraMunster {
+
+  font-family: '1313 MockingbiRd Lane', sans-serif;
+  font-size: 70px;
+  line-height: 28px;
+  margin-top: 6%;
+  color: #700d0d;
+  /*text-shadow: 4px 4px 5px gold;*/
+  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
+    4px 4px 5px rgba(201, 234, 14, 0.8);
+  margin-bottom: 70px;
+  opacity: 0;
+  transform: translateY(-100px);
+  animation: entrar-desde-arriba 0.4s ease-out forwards;
+
+}
+
+@keyframes entrar-desde-arriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#letraMunster-enlace {
+  text-decoration: none;
+
+}
+
+#letraMunster:hover {
+  /* border: transparent; */
+  color: #034c04;
+  cursor: pointer;
+}
+
+#botonArriba {
+  width: 70px;
+  height: 55px;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  border-radius: 50;
+  padding: 5px;
+  position: fixed;
+
+  color: #700d0d;
+
+}
+
+
+#botonArriba:hover {
+  border-style: none;
+  width: 20x;
+  height: 40px;
+
+}
+
+.galeriaPersonajes{
+ text-decoration: none;
+}
+
+.personajes h2{
+  font-family: '1313 MockingbiRd Lane', sans-serif;
+  font-size: 4.6em;
+  color: #700d0d;
+  /*text-shadow: 4px 4px 5px gold;*/
+  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
+    4px 4px 5px rgba(201, 234, 14, 0.8);
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 10px 0;
+
+ 
+}
+   
+   
