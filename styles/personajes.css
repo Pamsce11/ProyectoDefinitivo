@@ -26,7 +26,6 @@ body {
   text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
     4px 4px 5px rgba(201, 234, 14, 0.8);
   margin-bottom: 70px;
-  opacity: 0;
   transform: translateY(-100px);
   animation: entrar-desde-arriba 0.4s ease-out forwards;
 
@@ -53,6 +52,8 @@ body {
   /* border: transparent; */
   color: #034c04;
   cursor: pointer;
+
+  
 }
 
 #botonArriba {
@@ -78,16 +79,21 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   max-width: 1300px;
   justify-content: center;
-  padding: 60px 40px;
+  padding: 80px 80px;
 }
 
 .galeriaPersonajes {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 90px 40px;
   justify-content: center;
+  
+
 
 }
 
@@ -97,14 +103,21 @@ main {
   height: 500px;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.4), /* Sombra inferior */
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset, /* Borde interior sutil */
+    0 10px 20px rgba(0, 0, 0, 0.6); 
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .personaje:hover{
   transform: translateY(-9px) scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.5), /* Sombra grande y difusa */
+    0 5px 15px rgba(0, 0, 0, 0.8),  /* Sombra más cercana y oscura */
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset; /* Mantiene el borde interior */
 }
 
 .personaje img.actor {
