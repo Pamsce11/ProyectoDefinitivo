@@ -1,7 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/1313-mockingbird-lane');
 body{
 
-  background-image: url(/imagenProyecto/verdeFotoDeFondo.jpg);
+  background-image: url(../imagenProyecto/verdeFotoDeFondo.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
