@@ -112,3 +112,52 @@ body{
   0% { right: -220px; opacity: 0; }
   100% { right: 90px; opacity: 1; } /* posición final */
 }
+
+/*tablet*/
+
+@media (max-width: 1024px) {
+  .nombre-personaje {
+    font-size: 120px;
+    left: 20%;
+    top: 200px;
+  }
+
+  .side-img-left {
+    width: 280px;
+    left: 10px;
+  }
+
+  .side-img-right {
+    width: 280px;
+    right: 20px;
+  }
+}
+
+/* Pantallas pequeña */
+
+@media (max-width: 768px) {
+  .fred {
+    height: auto;
+    padding-bottom: 80px;
+  }
+
+  .nombre-personaje {
+    position: static;
+    font-size: 80px;
+    display: block;
+    margin: 40px auto 20px;
+    text-align: center;
+  }
+
+  .side-img-left,
+  .side-img-right {
+    position: static;
+    display: block;
+    margin: 20px auto;
+    width: 70%;
+    animation: none;
+    opacity: 1;
+  }
+}
+
+
