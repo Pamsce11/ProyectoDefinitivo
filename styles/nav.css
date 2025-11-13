@@ -1,17 +1,17 @@
-body{
+body {
     padding: 0;
     margin: 0;
 }
 
 nav {
     position: sticky;
-    top:0;
+    top: 0;
     border-bottom: 2px groove green;
-    background:transparent;
+    background: transparent;
     background-color: rgba(0, 128, 0, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
-    z-index:100;
+    z-index: 100;
 }
 
 #menu {
@@ -34,60 +34,94 @@ input:checked~.menu-desplegable {
 
 nav a img {
     width: 60%;
-   
+
 }
 
 ul.menu-desplegable {
     list-style: none;
     padding: 0;
-    font-family:'1313 MockingbiRd Lane', sans-serif;
-    font-size:x-large;
+    font-family: '1313 MockingbiRd Lane', sans-serif;
+    font-size: x-large;
 }
+
 
 ul.menu-desplegable li {
     padding: 0.5em;
- 
+
 }
 
 
 ul.menu-desplegable a {
+ display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color:#700d0d;
+    color: #700d0d;
+    text-shadow:
+    1px 1px 2px rgba(181, 191, 175, 0.5),   /* sombra base tenue */
+    3px 3px 6px rgba(173, 255, 47, 0.6),     /* verde amarillento suave */
+    0 0 10px rgba(255, 255, 100, 0.5);      
     font-size: 1.5em;
     padding: 0.2em 0.4em;
-    text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-               4px 4px 5px rgba(201, 234, 14, 0.8); 
-               
-               
+  transition: transform 0.15s ease, color 0.3s ease; 
+
 }
 
 ul.menu-desplegable a:hover {
     border: transparent;
     /*color: rgb(168, 159, 247);*/
+    transform: scale(1.1);
     text-decoration: none;
-    color:#075408;
+    color: #075208;
+     animation: goteo 2s ease-in-out infinite;
+ 
+}
+
+@keyframes goteo {
+    0% {
+        text-shadow: 
+            0 0 5px #a0ff4f, 
+            0 0 10px #7fff00, 
+            0 0 20px #b0ff70;
+    }
+
+    50% {
+        text-shadow: 
+            0 2px 15px #a0ff4f, 
+            0 4px 25px #7fff00, 
+            0 8px 40px #b0ff70;
+    }
+
+    100% {
+        text-shadow: 
+            0 0 5px #a0ff4f, 
+            0 0 10px #7fff00, 
+            0 0 20px #b0ff70;
+    }
+}
+
+ul.menu-desplegable a:hover::after {
+    height: 10px; /* altura del goteo */
 }
 
 /* submenu con hover */
 
-.sub-menu{
+.sub-menu {
     display: none;
     list-style: none;
     padding: 0;
     margin: 0;
-    background:transparent;
-    background-color: rgba(0, 128, 0, 0.5);
+    background: transparent;
+    background-image:url(../imagenProyecto/verdeFotoDeFondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-     z-index:100;
-     font-size: 0.9em;
+    z-index: 100;
+    font-size: 0.9em;
 
 }
 
 
-.menu-desplegable li:hover .sub-menu{
-    display:block;
+.menu-desplegable li:hover .sub-menu {
+    display: block;
     position: absolute;
 }
 
@@ -112,7 +146,7 @@ ul.menu-desplegable a:hover {
 
     a.menu-desplegable img {
         width: 150px;
-        
+
     }
 
     nav {
@@ -120,9 +154,9 @@ ul.menu-desplegable a:hover {
         display: flex;
         justify-content: space-between;
         align-items: center;
-         
-        
-        
+
+
+
     }
 
 }

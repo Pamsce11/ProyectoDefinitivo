@@ -16,19 +16,22 @@ body {
 }
 
 #letraMunster {
-
   font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 70px;
   line-height: 28px;
   margin-top: 6%;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
-  margin-bottom: 70px;
+  text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
   opacity: 0;
-  transform: translateY(-100px);
+  transform: translateY(-100px)scale(1);
   animation: entrar-desde-arriba 0.4s ease-out forwards;
+  transition: transform 0.4s ease, text-shadow 0.1s ease;
+  cursor: pointer;
 
 }
 
@@ -46,17 +49,43 @@ body {
 
 
 
-
 #letraMunster-enlace {
   text-decoration: none;
 
 }
 
 #letraMunster:hover {
-  /* border: transparent; */
+  transform: translateY(-10px) scale(1.1);
   color: #034c04;
-  cursor: pointer;
+  text-shadow:
+    0 0 10px #adff2f,
+    0 0 20px #00ff00,
+    0 0 40px #00ff88,
+    0 0 80px #aaff00;
+
+
 }
+
+@keyframes goteo {
+  0% {
+    text-shadow: 0 0 10px #adff2f, 0 0 20px #00ff00;
+  }
+
+  50% {
+    text-shadow: 0 4px 25px #aaff00, 0 8px 40px #00ff88;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #adff2f, 0 0 20px #00ff00;
+  }
+
+}
+
+#letraMunster:hover::after {
+  content: '';
+  animation: goteo 4s ease-in-out infinite;
+}
+
 
 #botonArriba {
   width: 70px;
@@ -100,9 +129,12 @@ body {
   font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 70px;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
+ text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
   text-align: center;
   margin-top: -10px;
   margin-bottom: 10px;
@@ -185,9 +217,12 @@ body {
   font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 70px;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
+ text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
   text-align: center;
   margin-top: -10px;
   margin-bottom: 2px;
@@ -294,9 +329,12 @@ align-items: center;
   font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 70px;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
+text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
   text-align: center;
   margin-top: -6px;
   margin-bottom: 30px;
@@ -369,9 +407,12 @@ margin-bottom: 10px;
 font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 70px;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
+text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
   text-align: center;
   margin-top: -6px;
   margin-bottom: 26px;

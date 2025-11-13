@@ -16,18 +16,22 @@ body {
 }
 
 #letraMunster {
-
   font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 70px;
   line-height: 28px;
   margin-top: 6%;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
-  margin-bottom: 70px;
-  transform: translateY(-100px);
+  text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
+  opacity: 0;
+  transform: translateY(-100px)scale(1);
   animation: entrar-desde-arriba 0.4s ease-out forwards;
+  transition: transform 0.4s ease, text-shadow 0.1s ease;
+  cursor: pointer;
 
 }
 
@@ -53,8 +57,38 @@ body {
   color: #034c04;
   cursor: pointer;
 
-  
+  transform: translateY(-10px) scale(1.1);
+  color: #034c04;
+  text-shadow:
+    0 0 10px #adff2f,
+    0 0 20px #00ff00,
+    0 0 40px #00ff88,
+    0 0 80px #aaff00;
+
 }
+
+
+@keyframes goteo {
+  0% {
+    text-shadow: 0 0 10px #adff2f, 0 0 20px #00ff00;
+  }
+
+  50% {
+    text-shadow: 0 4px 25px #aaff00, 0 8px 40px #00ff88;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #adff2f, 0 0 20px #00ff00;
+  }
+
+}
+
+#letraMunster:hover::after {
+  content: '';
+  animation: goteo 4s ease-in-out infinite;
+}
+
+
 
 #botonArriba {
   width: 70px;
@@ -92,7 +126,7 @@ main {
   flex-wrap: wrap;
   gap: 90px 50px;
   justify-content: center;
-  
+
 
 
 }
@@ -104,20 +138,25 @@ main {
   cursor: pointer;
   overflow: hidden;
   border-radius: 20px;
-  box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.4), /* Sombra inferior */
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset, /* Borde interior sutil */
-    0 10px 20px rgba(0, 0, 0, 0.6); 
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.4),
+    /* Sombra inferior */
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset,
+    /* Borde interior sutil */
+    0 10px 20px rgba(0, 0, 0, 0.6);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.personaje:hover{
+.personaje:hover {
   transform: translateY(-9px) scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-  box-shadow: 
-    0 15px 30px rgba(0, 0, 0, 0.5), /* Sombra grande y difusa */
-    0 5px 15px rgba(0, 0, 0, 0.8),  /* Sombra más cercana y oscura */
-    0 0 0 1px rgba(255, 255, 255, 0.1) inset; /* Mantiene el borde interior */
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    /* Sombra grande y difusa */
+    0 5px 15px rgba(0, 0, 0, 0.8),
+    /* Sombra más cercana y oscura */
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  /* Mantiene el borde interior */
 }
 
 .personaje img.actor {
@@ -147,9 +186,11 @@ main {
   font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 4.6em;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
+  text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),  /* sombra base tenue */
+    4px 4px 10px #39ff14,                    /* verde neón principal */
+    0 0 15px #adff2f,                        /* toque amarillento brillante */
+    0 0 25px #39ff14;  
   opacity: 1;
   transition: opacity 0.5s ease;
 
@@ -157,12 +198,15 @@ main {
 
 .personaje .nombre-hover {
   position: absolute;
-    font-family: '1313 MockingbiRd Lane', sans-serif;
+  font-family: '1313 MockingbiRd Lane', sans-serif;
   font-size: 4.6em;
   color: #700d0d;
-  /*text-shadow: 4px 4px 5px gold;*/
-  text-shadow: 1px 1px 3px rgba(181, 191, 175, 0.5),
-    4px 4px 5px rgba(201, 234, 14, 0.8);
+  text-shadow:
+    1px 1px 3px rgba(181, 191, 175, 0.5),
+    /* sombra base tenue */
+    4px 4px 10px rgba(201, 234, 14, 0.9),
+    /* sombra amarilla más amplia y brillante */
+    0 0 20px rgba(255, 255, 0, 0.7);
   bottom: 10px;
   width: 100%;
   text-align: center;
@@ -170,19 +214,19 @@ main {
   transition: opacity 0.5s ease;
 }
 
-.personaje:hover img.actor{
+.personaje:hover img.actor {
   filter: grayscale(0%);
 
 }
 
-.personaje:hover img.personaje-hover{
+.personaje:hover img.personaje-hover {
   opacity: 1;
 }
 
-.personaje:hover .nombre{
-  opacity:0;
+.personaje:hover .nombre {
+  opacity: 0;
 }
 
-.personaje:hover .nombre-hover{
+.personaje:hover .nombre-hover {
   opacity: 1;
 }
